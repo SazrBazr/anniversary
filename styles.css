@@ -1,0 +1,120 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f7f1;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #ffccd5;
+    padding: 30px 10px;
+}
+
+h1 {
+    font-size: 2.5em; /* Slightly smaller for mobile scaling */
+    color: #d84a60;
+}
+
+p {
+    font-size: 1.2em;
+    color: #444;
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px; /* Constrain the width on larger screens */
+}
+
+.letter {
+    margin: 0 auto;
+    max-width: 700px; /* Restrict width for better readability */
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Timeline */
+#timeline ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+#timeline li {
+    margin: 5px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #ffccd5;
+    padding: 10px;
+    font-size: 1.1em;
+}
+
+/* Photo Collage */
+.photo-collage {
+    display: grid;
+    grid-template-areas: 
+        "photo1 photo2"
+        "photo3 photo2"
+        "photo3 photo4";
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+}
+
+.photo-collage img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo-collage img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Mobile Optimization */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 2em; /* Scale down for smaller screens */
+    }
+
+    .photo-collage {
+        grid-template-areas: 
+            "photo1"
+            "photo2"
+            "photo3"
+            "photo4"; /* Stack images for better readability */
+        grid-template-columns: 1fr;
+    }
+
+    .letter {
+        margin: 0 15px; /* Add padding on smaller screens */
+    }
+
+    section {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
